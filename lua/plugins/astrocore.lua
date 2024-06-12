@@ -47,8 +47,8 @@ return {
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs
-        ["<C-n>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        ["<C-p>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        ["C-n"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        ["C-p"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
@@ -62,7 +62,7 @@ return {
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
-        ["<Leader>b"] = { desc = "Buffers" },
+        -- ["<Leader>b"] = { desc = "Buffers" },
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
