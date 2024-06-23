@@ -10,27 +10,29 @@ return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
   opts = {
-     autocmds = {
-      -- disable alpha autostart
-      alpha_autostart = false,
-      restore_session = {
-        {
-          event = "VimEnter",
-          desc = "Restore previous directory session if neovim opened with no arguments",
-          nested = true, -- trigger other autocommands as buffers open
-          callback = function()
-            -- Only load the session if nvim was started with no args
-            if vim.fn.argc(-1) == 0 then
-              -- try to load a directory session using the current working directory
-              require("resession").load(
-                vim.fn.getcwd(),
-                { dir = "dirsession", silence_errors = true }
-              )
-            end
-          end,
-        },
+    -- Configure project root detection, check status with `:AstroRootInfo`
+    rooter = {
+      -- list of detectors in order of prevalence, elements can be:
+      --   "lsp" : lsp detection
+      --   string[] : a list of directory patterns to look for
+      --   fun(bufnr: integer): string|string[] : a function that takes a buffer number and outputs detected roots
+      detector = {
+        "lsp", -- highest priority is getting workspace from running language servers
+        { ".git", "_darcs", ".hg", ".bzr", ".svn" }, -- next check for a version controlled parent directory
+        { "lua", "MakeFile", "package.json" }, -- lastly check for known project root files
       },
-    },   
+      -- ignore things from root detection
+      ignore = {
+        servers = {}, -- list of language server names to ignore (Ex. { "efm" })
+        dirs = {}, -- list of directory patterns (Ex. { "~/.cargo/*" })
+      },
+      -- automatically update working directory (update manually with `:AstroRoot`)
+      autochdir = false,
+      -- scope of working directory to change ("global"|"tab"|"win")
+      scope = "global",
+      -- show notification on every working directory change
+      notify = false,
+    },
      -- Configuration table of session options for AstroNvim's session management powered by Resession
     sessions = {
       -- Configure auto saving
