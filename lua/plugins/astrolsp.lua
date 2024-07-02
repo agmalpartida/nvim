@@ -80,6 +80,12 @@ return {
         },
       },
     },
+    -- Configure default capabilities for language servers (`:h vim.lsp.protocol.make_client.capabilities()`)
+    capabilities = {
+      textDocument = {
+        foldingRange = { dynamicRegistration = false },
+      },
+    },
     -- mappings to be set up on attaching of a language server
     mappings = {
       n = {
