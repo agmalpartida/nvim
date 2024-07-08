@@ -1,12 +1,12 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+--if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- Customize Treesitter
 
 ---@type LazySpec
 return {
   "nvim-neo-tree/neo-tree.nvim",
-      filesystem = {
-      filtered_items = {
+  filesystem = {
+    filtered_items = {
         visible = false,
         hide_dotfiles = false, 
         hide_gitignored = false,
