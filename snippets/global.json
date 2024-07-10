@@ -42,5 +42,31 @@
       "",
       ""],
   "description": "Template for issue analysis"
+  },
+  "quality": {
+    "prefix": "hugo",
+    "body": [
+      "---",
+      "Title",
+      "",
+      "date",
+      "$(date -I)",
+      "categories",
+      "",
+      "tags",
+      "",
+      "keywords",
+      "",
+      "summary",
+      "",
+      "comments",
+      "false",
+      "showMeta",
+      "false",
+      "showActions",
+      "false",
+      "---"],
+  "description": "Template for hugo post"
   }
+ 
 }
