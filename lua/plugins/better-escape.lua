@@ -1,3 +1,4 @@
+
 ---@type LazySpec
 return {
   "max397574/better-escape.nvim",
@@ -14,15 +15,24 @@ return {
         j = {
           k = esc_fn,
         },
+        k = {
+          j = esc_fn,
+        },
       },
       c = {
         j = {
           k = esc_fn,
         },
+        k = {
+          j = esc_fn,
+        },
       },
       t = {
         j = {
           k = "<C-\\><C-n>",
+        },
+        k = {
+          j = esc_fn,
         },
       },
       v = {},
