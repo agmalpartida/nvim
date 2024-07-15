@@ -64,7 +64,7 @@ return {
   },
 
   -- You can disable default plugins as follows:
-  --{ "max397574/better-escape.nvim", enabled = false },
+  { "max397574/better-escape.nvim", enabled = false },
   -- {
   --   "max397574/better-escape.nvim",
   --   opts = function(_, opts)
@@ -74,6 +74,13 @@ return {
   --     }
   --     return opts
   --   end,
+  -- },
+  -- {
+  --   "max397574/better-escape.nvim",
+  --   opts = {
+  --     mapping = { "jk", "kj", "JK", "KJ" },
+  --     clear_empty_lines = true,
+  --   }
   -- },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
