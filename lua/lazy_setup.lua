@@ -17,6 +17,11 @@ require("lazy").setup({
   -- Configure any other `lazy.nvim` configuration options here
   install = { colorscheme = { "astrodark", "habamax" } },
   ui = { backdrop = 100 },
+  plugins = {
+    better_escape = {
+      mapping = { "ii", "jj", "jk", "kj" },
+    },
+  },
   performance = {
     rtp = {
       -- disable some rtp plugins, add more to your liking
