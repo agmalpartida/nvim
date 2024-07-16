@@ -1,26 +1,43 @@
 
+---@type LazySpec
 return {
   "max397574/better-escape.nvim",
-  keys = function(_, keys)
-    local plugin = require("lazy.core.config").spec.plugins["better-escape.nvim"]
-    local opts = require("lazy.core.plugin").values(plugin, "opts", false)
-    local mappings
-    if opts.mappings ~= false then
-      mappings = vim.tbl_deep_extend("keep", opts.mappings or {}, {
-        i = { j = { k = "<Esc>", j = "<Esc>" } },
-        c = { j = { k = "<Esc>", j = "<Esc>" } },
-        t = { j = { k = "<Esc>", j = "<Esc>" } },
-        v = { j = { k = "<Esc>" } },
-        s = { j = { k = "<Esc>" } },
-      })
-    end
-
-    for mode, mapping in pairs(mappings) do
-      for lhs, _ in pairs(mapping) do
-        table.insert(keys, { lhs, mode = mode })
+  cond = not vim.g.vscode,
+  opts = function(_, opts)
+    local esc_fn = function()
+      if vim.bo.filetype == "OverseerForm" then
+        return vim.api.nvim_win_get_cursor(0)[2] > 1 and "<Esc>lx" or "<Esc>x"
       end
+      return vim.api.nvim_win_get_cursor(0)[2] > 1 and "<Esc>l" or "<Esc>"
     end
+    opts.mappings = {
+      i = {
+        j = {
+          k = esc_fn,
+        },
+        k = {
+          j = esc_fn,
+        },
+      },
+      c = {
+        j = {
+          k = esc_fn,
+        },
+        k = {
+          j = esc_fn,
+        },
+      },
+      t = {
+        j = {
+          k = "<C-\\><C-n>",
+        },
+        k = {
+          j = esc_fn,
+        },
+      },
+      v = {},
+      x = {},
+      s = {},
+    }
   end,
-  opts = { timeout = 300 },
 }
-
