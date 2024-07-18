@@ -1,4 +1,3 @@
---if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
@@ -102,6 +101,7 @@ return {
     mappings = {
       -- first key is the mode
       n = {
+        ["<Leader>m"] = function() vim.cmd("Glow") end,
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs
