@@ -51,7 +51,7 @@ return {
       -- scope of working directory to change ("global"|"tab"|"win")
       scope = "global",
       -- show notification on every working directory change
-      notify = true,
+      notify = false,
     },
      -- Configuration table of session options for AstroNvim's session management powered by Resession
     sessions = {
@@ -66,7 +66,7 @@ return {
         filetypes = { "gitcommit", "gitrebase", "node_modules" }, -- filetypes to ignore sessions
         buftypes = {}, -- buffer types to ignore sessions
       },
-    },   
+    },
     -- Configure core features of AstroNvim
     features = {
       large_buf = { size = 1024 * 500, lines = 10000 }, -- set global limits for large files for disabling features like treesitter

@@ -8,7 +8,6 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       window = 40,
-      popup_border_style = "rounded",
       default_component_configs = {
         container = {
           enable_character_fade = false,
@@ -33,9 +32,6 @@ return {
       },
     },
   },
-  -- Disabled and removed plugins
-  --{ "goolord/alpha-nvim", enabled = false },
-  
   -- == Examples of Adding Plugins ==
 
   "andweeb/presence.nvim",
