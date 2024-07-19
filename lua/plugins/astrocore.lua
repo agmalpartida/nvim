@@ -51,7 +51,7 @@ return {
       -- scope of working directory to change ("global"|"tab"|"win")
       scope = "global",
       -- show notification on every working directory change
-      notify = false,
+      notify = true,
     },
      -- Configuration table of session options for AstroNvim's session management powered by Resession
     sessions = {
@@ -63,7 +63,7 @@ return {
       -- Patterns to ignore when saving sessions
       ignore = {
         dirs = {}, -- working directories to ignore sessions in
-        filetypes = { "gitcommit", "gitrebase" }, -- filetypes to ignore sessions
+        filetypes = { "gitcommit", "gitrebase", "node_modules" }, -- filetypes to ignore sessions
         buftypes = {}, -- buffer types to ignore sessions
       },
     },   
