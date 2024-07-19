@@ -8,6 +8,7 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       window = 40,
+      popup_border_style = "rounded",
       default_component_configs = {
         container = {
           enable_character_fade = false,
@@ -16,6 +17,7 @@ return {
       filesystem = {
         follow_current_file = {
           enabled = true,
+          leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
         },
         filtered_items = {
           visible = true,
