@@ -1,6 +1,6 @@
 ---@type LazySpec
 return {
-  "ellisonleao/glow.nvim",
+"ellisonleao/glow.nvim",
   opts = {
     --glow_path = "/usr/local/bin/glow", -- will be filled automatically with your glow bin in $PATH, if any
     install_path = "~/.local/bin", -- default path for installing glow binary
