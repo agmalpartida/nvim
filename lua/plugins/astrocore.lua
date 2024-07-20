@@ -102,7 +102,7 @@ return {
     mappings = {
       -- first key is the mode
       n = {
-        ["<Leader>m"] = function() vim.cmd("Glow") end,
+        ["<Leader>m"] = { function() require("ellisonleao/glow.nvim") vim.cmd("Glow") end, desc = "Load last session" } ,
         ["<Leader>mq"] = function() vim.cmd("Glow!") end,
         -- second key is the lefthand side of the map
 
