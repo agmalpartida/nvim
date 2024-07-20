@@ -1,11 +1,5 @@
-
--- You can also add or configure plugins by creating files in this `plugins/` folder
--- Here are some examples:
-
-  --{ "max397574/better-escape.nvim", enabled = false },
 ---@type LazySpec
 return {
-  {
     "windwp/nvim-autopairs",
     config = function(plugin, opts)
       require "astronvim.plugins.configs.nvim-autopairs"(plugin, opts) -- include the default astronvim config that calls the setup call
@@ -33,5 +27,4 @@ return {
         Rule("a", "a", "-vim")
       )
     end,
-  },
 }
