@@ -46,7 +46,7 @@ return {
     servers = {
       -- "pyright"
       "yaml-language-server",
-      "markdownlint",
+      --"markdownlint",
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
