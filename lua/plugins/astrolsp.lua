@@ -26,7 +26,7 @@ return {
           -- "go",
           "yaml",
           -- "markdown",
-          -- "json",
+          "json",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
