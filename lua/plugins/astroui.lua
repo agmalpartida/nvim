@@ -10,8 +10,26 @@ return {
   opts = {
     -- Colorscheme set on startup, a string that is used with `:colorscheme astrodark`
     -- colorscheme = "onedark",
+    priority = 1000, -- make sure to load this before all the other start plugins
     colorscheme = "everforest",
-    background = "dark",
-    everforest_diagnostic_text_highlight = "1"
+    background = "medium",
+    transparent_background_level = 0,
+    italics = true,
+    disable_italic_comments = false,
+    on_highlights = function(hl, palette)
+      hl.DiagnosticError = { fg = palette.none, bg = palette.none, sp = palette.red }
+      hl.DiagnosticWarn = { fg = palette.none, bg = palette.none, sp = palette.yellow }
+      hl.DiagnosticInfo = { fg = palette.none, bg = palette.none, sp = palette.blue }
+      hl.DiagnosticHint = { fg = palette.none, bg = palette.none, sp = palette.green }
+      hl.Comment = { fg = palette.red, bg = palette.none, sp = palette.green }
+      hl.SpecialComment = { fg = palette.red, bg = palette.none, sp = palette.green }
+      hl.CursorLine = { fg = palette.red, bg = palette.none, sp = palette.green }
+      hl.CursorColumn = { fg = palette.red, bg = palette.none, sp = palette.green }
+      hl.Normal = { fg = palette.red, bg = palette.none, sp = palette.green }
+      
+    end,
+    colours_override = function (palette)
+      palette.red = "#b86466"
+    end
   },
 }
