@@ -29,6 +29,25 @@ return {
           end,
         },
       },
+      cursorhighlight = {
+        {
+          event = "InsertEnter",
+          pattern = "*",
+          desc = "",
+          group = "cursorline",
+          callback = function ()
+            local new_cursorline = #vim.opt.colorline > 1 and 2 or 1
+            if new_cursorline ~= vim.opt.cursorline:get() then
+              -- vim.opt.colorline = "hi clear CursorLine | hi link CursorLine CursorColumn"
+              vim.opt.colorline = "CursorLine guibg=#000050 guifg=fg"
+              vim.opt.cursorline = "CursorLineNr red term=bold cterm=underline ctermfg=11 \
+                                    gui=bold guifg=Yellow"
+            end
+          end
+            -- CursorLine guibg=#000050 guifg=fg,
+            -- CursorLine guibg=#004000 guifg=fg
+        },
+      },
       autohidetabline = {
         -- each augroup contains a list of auto commands
         {
