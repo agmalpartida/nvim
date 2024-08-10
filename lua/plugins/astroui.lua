@@ -21,11 +21,13 @@ return {
       hl.DiagnosticWarn = { fg = palette.none, bg = palette.none, sp = palette.yellow }
       hl.DiagnosticInfo = { fg = palette.none, bg = palette.none, sp = palette.blue }
       hl.DiagnosticHint = { fg = palette.none, bg = palette.none, sp = palette.green }
-      hl.Comment = { fg = palette.red, bg = palette.none, sp = palette.green }
-      hl.SpecialComment = { fg = palette.red, bg = palette.none, sp = palette.green }
-      hl.CursorLine = { fg = palette.red, bg = palette.none, sp = palette.green }
-      hl.CursorColumn = { fg = palette.red, bg = palette.none, sp = palette.green }
-      hl.Normal = { fg = palette.red, bg = palette.none, sp = palette.green }
+      hl.Comment = { fg = palette.none, bg = palette.none, sp = palette.green }
+      hl.SpecialComment = { fg = palette.none, bg = palette.none, sp = palette.green }
+      hl.Cursor = { fg = palette.none, bg = palette.none, sp = palette.green }
+      hl.CursorLine = { fg = palette.none, bg = palette.none, sp = palette.green }
+      hl.CursorLineNr = { fg = palette.none, bg = palette.none, sp = palette.green }
+      hl.CursorColumn = { fg = palette.none, bg = palette.none, sp = palette.green }
+      hl.Normal = { fg = palette.none, bg = palette.none, sp = palette.green }
       
     end,
     colours_override = function (palette)
