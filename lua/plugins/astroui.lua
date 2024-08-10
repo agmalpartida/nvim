@@ -21,17 +21,14 @@ return {
       hl.DiagnosticWarn = { fg = palette.none, bg = palette.none, sp = palette.yellow }
       hl.DiagnosticInfo = { fg = palette.none, bg = palette.none, sp = palette.blue }
       hl.DiagnosticHint = { fg = palette.none, bg = palette.none, sp = palette.green }
-      hl.Comment = { fg = palette.none, bg = palette.none, sp = palette.green }
-      hl.SpecialComment = { fg = palette.none, bg = palette.none, sp = palette.green }
-      hl.Cursor = { fg = palette.none, bg = palette.none, sp = palette.green }
-      hl.CursorLine = { fg = palette.none, bg = palette.none, sp = palette.green }
+      hl.Normal = { fg = palette.none, bg = palette.none, sp = palette.red }
+      hl.CursorColumn = { fg = palette.none, bg = palette.none, sp = palette.yellow }
+      hl.CursorLine = { fg = palette.none, bg = palette.none, sp = palette.blue }
       hl.CursorLineNr = { fg = palette.none, bg = palette.none, sp = palette.green }
-      hl.CursorColumn = { fg = palette.none, bg = palette.none, sp = palette.green }
-      hl.Normal = { fg = palette.none, bg = palette.none, sp = palette.green }
-      
+      hl.LineNr = { fg = palette.none, bg = palette.none, sp = palette.red }
     end,
     colours_override = function (palette)
-      palette.grey1 = "#b86466"
+      palette.red = "#b86466"
     end
   },
 }
