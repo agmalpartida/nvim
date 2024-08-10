@@ -9,6 +9,9 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- Colorscheme set on startup, a string that is used with `:colorscheme astrodark`
-    colorscheme = "onedark",
+    -- colorscheme = "onedark",
+    colorscheme = "everforest",
+    background = "dark",
+    everforest_diagnostic_text_highlight = "1"
   },
 }
