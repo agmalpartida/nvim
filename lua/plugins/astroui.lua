@@ -31,7 +31,7 @@ return {
       
     end,
     colours_override = function (palette)
-      palette.red = "#b86466"
+      palette.grey1 = "#b86466"
     end
   },
 }
