@@ -20,6 +20,6 @@ return {
       hl.LineNr = { fg = palette.none, bg = palette.none, sp = palette.red }
     end,
     colours_override = function (palette)
-      palette.gray1 = "#b86466"
+      palette.grey = "#b86466"
     end
 }
