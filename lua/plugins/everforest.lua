@@ -1,7 +1,6 @@
 ---@type LazySpec
 return {
-  {
-    "nvim-neo-tree/neo-tree.nvim",
+    "sainnhe/everforest",
     opts = {
       priority = 1000, -- make sure to load this before all the other start plugins
       background = "medium",
@@ -23,5 +22,4 @@ return {
         palette.red = "#b86466"
       end
     },
-  },
 }
