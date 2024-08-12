@@ -15,7 +15,7 @@ require("lazy").setup({
   { import = "plugins" },
 } --[[@as LazySpec]], {
   -- Configure any other `lazy.nvim` configuration options here
-  install = { colorscheme = { "astrodark", "habamax", "kanagawa" } },
+  install = { colorscheme = { "astrodark", "habamax", "kanagawa", "everforest" } },
   ui = { backdrop = 100 },
   plugins = {
     better_escape = {
