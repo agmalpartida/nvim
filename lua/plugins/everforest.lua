@@ -14,6 +14,7 @@ return {
       hl.Comment = { fg = palette.red, bg = palette.green, sp = palette.green }
       hl.SpecialComment = { fg = palette.red, bg = palette.green, sp = palette.yellow }
       hl.Normal = { fg = palette.none, bg = palette.none, sp = palette.red }
+      hl.Cursor = { fg = palette.red, bg = palette.green, sp = palette.none }
       hl.CursorColumn = { fg = palette.none, bg = palette.none, sp = palette.yellow }
       hl.CursorLine = { fg = palette.none, bg = palette.none, sp = palette.blue }
       hl.CursorLineNr = { fg = palette.none, bg = palette.none, sp = palette.green }
