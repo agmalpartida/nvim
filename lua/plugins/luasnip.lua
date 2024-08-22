@@ -5,12 +5,12 @@ return {
       require "astronvim.plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
       -- add more custom luasnip configuration such as filetype extend or custom snippets
       local luasnip = require "luasnip"
-      vim.keymap.set({ "i", "s" }, "<C-l>", function()
+      vim.keymap.set({ "i", "s" }, "<C-k>", function()
         if luasnip.choice_active() then
           luasnip.change_choice(1)
         end
       end)
-      vim.keymap.set({ "i", "s" }, "<C-h>", function()
+      vim.keymap.set({ "i", "s" }, "<C-j>", function()
         if luasnip.choice_active() then
        luasnip.change_choice(-1)
        end
