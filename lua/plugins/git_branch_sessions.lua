@@ -43,7 +43,7 @@ return {
     },
     autocmds = {
       -- disable alpha autostart
-      alpha_autostart = false,
+      -- alpha_autostart = false,
       git_branch_sessions = {
         -- auto save directory sessions on leaving
         {
