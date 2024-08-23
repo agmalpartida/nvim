@@ -20,8 +20,8 @@ return {
         opts.section.buttons.val,
         opts.button(
           "n",
-          " Work Notes",
-          ':lua require("telescope.builtin").find_files { prompt_title = "Work Notes", cwd = "~/WORK/NOTES", follow = true }<CR>'
+          "  Work Notes",
+          ':lua require("telescope.builtin").find_files { prompt_title = "Work Notes", cwd = "~/Documents/Job/Docs", follow = true }<CR>'
         )
       )
       return opts
