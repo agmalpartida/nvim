@@ -215,7 +215,7 @@ return {
     mappings = {
       -- first key is the mode
       n = {
-        ["<Leader>m"] = { function() vim.cmd("Glow") end, desc = "Markdown Preview" },
+        ["<Leader>m"] = { function() vim.cmd("MarkdownPreview") end, desc = "Markdown Preview" },
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs
