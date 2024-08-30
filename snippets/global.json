@@ -46,17 +46,20 @@
   "hugo": {
     "prefix": "hugo",
     "body": [
-      "+++",
-      "title = '${1:example}'",
-      "date = ${2}",
-      "categories = ['${3:example}']",
-      "tags = ['${4:example}']",
-      "keywords = ['${5:example}']",
-      "summary = '${6:example}'",
-      "comments = false",
-      "showActions = false",
-      "showMeta = false",
-      "+++"],
+      "---",
+      "Title: ${1:example}",
+      "date: ${2}",
+      "categories:",
+      "- ${3:example}",
+      "tags:",
+      "- ${4:example}",
+      "keywords:",
+      "- ${5:example}",
+      "summary: ${6:example}",
+      "comments: false",
+      "showMeta: false",
+      "showActions: false",
+      "---"],
   "description": "Template for hugo post"
   }
  
