@@ -1,5 +1,5 @@
 return {
-  "ekickx/clipboard-image.nvim",
+  "img-paste-devs/img-paste.vim",
   {
   }
 }
