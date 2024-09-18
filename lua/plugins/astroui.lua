@@ -9,6 +9,6 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- Colorscheme set on startup, a string that is used with `:colorscheme astrodark`
-    colorscheme = "nordic",
+    colorscheme = "dracula",
   },
 }
