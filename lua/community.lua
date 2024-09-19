@@ -6,7 +6,6 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.colorscheme.nightfox-nvim" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- import/override with your plugins folder
