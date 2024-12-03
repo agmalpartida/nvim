@@ -10,7 +10,7 @@ return {
         },
       file_size = {
         enabled = true,
-        required_width = 64, -- min width of window required to show this column
+        required_width = 24, -- min width of window required to show this column
       },
       type = {
         enabled = true,
@@ -18,7 +18,7 @@ return {
       },
       last_modified = {
         enabled = true,
-        required_width = 18, -- min width of window required to show this column
+        required_width = 88, -- min width of window required to show this column
       },
       created = {
         enabled = true,
