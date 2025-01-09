@@ -24,6 +24,14 @@ return {
     autocmds = {
       -- disable alpha autostart
       alpha_autostart = false,
+      temporary_files = {
+          {
+              -- event is added here as a string or a list-like table of events
+              event = { "BufNewFile", "BufRead" },
+              pattern = "Jenkinsfile*",
+              command = "set filetype=groovy",
+          },
+      },
       git_branch_sessions = {
         -- auto save directory sessions on leaving
         {
