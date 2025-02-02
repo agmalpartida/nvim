@@ -7,6 +7,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.media.img-clip-nvim" },
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.colorscheme.everforest" },
   { import = "astrocommunity.colorscheme.gruvbox-nvim" },
