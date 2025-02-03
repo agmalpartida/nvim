@@ -10,6 +10,7 @@ return {
   opts = {
     -- Colorscheme set on startup, a string that is used with `:colorscheme astrodark`
     -- colorscheme = "catppuccin",
-    colorscheme = "astrodark",
+    -- colorscheme = "astrodark",
+    colorscheme = "kanagawa",
   },
 }
