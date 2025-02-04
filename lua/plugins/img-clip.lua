@@ -4,9 +4,9 @@ return {
     opts = {
       -- add options here
       -- or leave it empty to use the default settings
-      dir_path = "TEST", ---@type string | fun(): string
-      extension = "png", ---@type string | fun(): string
-      file_name = "%Y-%m-%d-%H-%M-%S", ---@type string | fun(): string
+      dir_path = "TEST",
+      extension = "png",
+      file_name = "%Y-%m-%d-%H-%M-%S",
       relative_to_current_file = true,
     },
     keys = {
