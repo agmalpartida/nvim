@@ -9,11 +9,15 @@ return {
       --   return vim.fn.expand("%:t:r")
       -- end,
       extension = "png",
-      file_name = "%Y-%m-%d-%H-%M-%S",
+      -- file_name = "%Y-%m-%d-%H-%M-%S",
+      file_name = function()
+        local filename = vim.fn.expand("%:t:r") -- Nombre del archivo sin extensión
+        local date = os.date("%Y-%m-%d_%H-%M-%S") -- Fecha y hora
+        return filename .. "_" .. date -- Formato: nombreArchivo_YYYY-MM-DD_HH-MM-SS
+      end,
+      notify = true,
       use_absolute_path = false,
       relative_to_current_file = true,
-      -- template options
-      template = "$FILE_PATH",
       -- prompt options
       prompt_for_file_name = false,
     }
